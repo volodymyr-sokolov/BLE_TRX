@@ -1,0 +1,34 @@
+# Flash map imposed by the Adafruit nRF52 bootloader that these two boards
+# ship with.  The nRF Connect SDK's Partition Manager takes precedence over
+# the devicetree partitions, and left to itself it links the application at
+# 0x0 -- which flashes over the MBR and bricks the DFU path.
+#
+#   0x000000  MBR                 4 kB
+#   0x001000  SoftDevice s140 v6  148 kB   (present but never enabled here)
+#   0x026000  application         792 kB
+#   0x0ec000  settings storage    32 kB
+#   0x0f4000  bootloader          48 kB
+mbr:
+  address: 0x0
+  size: 0x1000
+  region: flash_primary
+
+softdevice:
+  address: 0x1000
+  size: 0x25000
+  region: flash_primary
+
+app:
+  address: 0x26000
+  size: 0xC6000
+  region: flash_primary
+
+settings_storage:
+  address: 0xEC000
+  size: 0x8000
+  region: flash_primary
+
+adafruit_boot:
+  address: 0xF4000
+  size: 0xC000
+  region: flash_primary

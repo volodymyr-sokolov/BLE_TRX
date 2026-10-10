@@ -1,0 +1,10 @@
+build_*/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.zip
+# Hardware-test captures contain nearby third-party devices
+docs/test_captures/
+# local captures
+*.jsonl
+*.pcapng

@@ -1,0 +1,4 @@
+# Compiled firmware must stay byte-exact (SHA256SUMS.txt): no line-ending conversion
+firmware_bin/*.hex binary
+firmware_bin/*.uf2 binary
+firmware_bin/SHA256SUMS.txt -text

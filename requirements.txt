@@ -1,0 +1,5 @@
+pyserial>=3.5
+# flashing over the Adafruit serial bootloader
+adafruit-nrfutil>=0.5
+# tests
+pytest>=7

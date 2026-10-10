@@ -1,0 +1,13 @@
+/*
+ * The nice!nano v2 is an nRF52840 module with the same Adafruit bootloader and
+ * the same 0x26000 application offset as the Feather, so it builds against the
+ * Feather board target.  Only the LED differs: blue on P0.15 instead of red on
+ * P1.15.
+ */
+/ {
+	leds {
+		led0: led_0 {
+			gpios = <&gpio0 15 0>;
+		};
+	};
+};
